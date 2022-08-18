@@ -20,4 +20,4 @@ spec:
      - containerPort: 2310
      env:
      - name: MYSQL_ROOT_PASSWORD
-      value: adminadmin
+       value: adminadmin
