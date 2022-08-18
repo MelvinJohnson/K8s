@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fb
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db
+  namespace: fb
+  labels:
+   app: psql
+   tier: backend
+   version: master
+spec:
+  containers:
+   - name: psql
+     image: postgres
+     ports:
+     - containerPort: 1234
+     env:
+     - name: POSTGRES_PASSWORD
+       value: adminadmin
+     volumeMounts:
+     - name : pgdata
+       mountPath: /var/lib/pstgresql/data
+  volumes:
+   - name: pgdata
+     hostPath:
+       path: /var/lib/pstgresql
+       type: DirectoryOrCreate
