@@ -7,7 +7,7 @@ metadata:
   labels:
    app: httpd
    tier: frontend-backend
-   version: v1
+   version: ver1
 spec:
   containers:
    - name: web
