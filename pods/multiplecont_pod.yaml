@@ -5,7 +5,7 @@ metadata:
   name: fb
 ---
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
   name: fb-pod
   namespace: fb
