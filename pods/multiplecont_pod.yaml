@@ -5,7 +5,7 @@ metadata:
   name: fb
 ---
 apiVersion: v1
-kind: Pod
+kind: pod
 metadata:
   name: fb-pod
   namespace: fb
@@ -19,12 +19,11 @@ spec:
    - name: web
      image: httpd
      ports:
-      - containerPort: 80
+     - containerPort: 80
    - name: db
      image: mysql
      ports:
-      - containerPort: 2310
-     env:
-      - name: MYSQL_ROOT_PASSWORD
-	value: adminadmin
-  
+     - containerPort: 2310
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: adminadmin
