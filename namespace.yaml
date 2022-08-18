@@ -2,9 +2,9 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: IG
+  name: ig
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: FB
+  name: fb
