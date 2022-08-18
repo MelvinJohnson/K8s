@@ -1,23 +1,30 @@
 ---
 apiVersion: v1
-kind: Pod
+kind: Namespace
 metadata:
-  name: multicontainer-pods
-  namespace: facebook
+  name: fb
+---
+apiVersion: v1
+kind: pod
+metadata:
+  name: fb-pod
+  namespace: fb
   labels:
-    app: httpd
-    tier: frontend-backend
-    version: v1
+   app: httpd
+   tier: frontend-backend
+   version: v1
 spec:
   containers:
-  - name: web
-    image: httpd
-    ports:
-    - containerPort: 80
-  - name: db
-    image: mysql
-    ports:
-    - containerPort: 3306
-    env:
-    - name: MYSQL_ROOT_PASSWORD
-      value: cloudnloud
+   - name: web
+     image: httpd
+     ports:
+     - containerPort: 80
+   - name: db
+     image: mysql
+     ports:
+     - containerPort: 2310
+     env:
+     - name: MYSQL_ROOT_PASSWORD
+      value: adminadmin
+  
+  
