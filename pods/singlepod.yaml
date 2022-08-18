@@ -5,7 +5,7 @@ metadata:
   name: ig
 ---
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
   name: ig-pod
   namespace: ig
