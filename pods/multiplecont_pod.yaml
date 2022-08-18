@@ -24,6 +24,6 @@ spec:
      image: mysql
      ports:
      - containerPort: 2310
-    env:
-    - name: MYSQL_ROOT_PASSWORD
+     env:
+     - name: MYSQL_ROOT_PASSWORD
       value: adminadmin
